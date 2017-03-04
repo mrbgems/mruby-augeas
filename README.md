@@ -12,5 +12,6 @@ To include `mruby-augeas` in your build of `mruby`, you need to have the
   conf.gem :github => "hercules-team/mruby-augeas"
 ```
 
-The bindings themselves follow the [ruby-augeas]() bindings as closely as
-is possible under `mruby`.
+The bindings themselves follow the
+[ruby-augeas](https://github.com/hercules-team/ruby-augeas) bindings as
+closely as is possible under `mruby`.
