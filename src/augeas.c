@@ -327,7 +327,7 @@ augeas_defnode(mrb_state *mrb, mrb_value self) {
 }
 
 mrb_value
-augeas_init(mrb_state *mrb, mrb_value class) {
+augeas_init(mrb_state *mrb, mrb_value klass) {
     unsigned int flags;
     char *root, *loadpath;
     augeas *aug = NULL;
@@ -340,7 +340,7 @@ augeas_init(mrb_state *mrb, mrb_value class) {
         mrb_raise(mrb, E_RUNTIME_ERROR, "Failed to initialize Augeas");
     }
 
-    rclass = mrb_class_ptr(class);
+    rclass = mrb_class_ptr(klass);
     self = mrb_obj_new(mrb, rclass, 0, NULL);
     mrb_data_init(self, aug, &augeas_type);
     return self;
