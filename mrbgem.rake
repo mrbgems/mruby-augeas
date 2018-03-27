@@ -6,4 +6,5 @@ MRuby::Gem::Specification.new('mruby-augeas') do |spec|
 
   spec.cc.flags << '-I /usr/include/libxml2'
   spec.linker.libraries << 'augeas'
+  add_dependency 'mruby-hash-ext'
 end
